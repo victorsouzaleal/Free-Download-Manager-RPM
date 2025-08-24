@@ -1,0 +1,30 @@
+name: Build Free Download Manager RPM
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: fedora:latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          dnf update -y
+          dnf install -y wget binutils tar ruby rubygems rpm-build findutils which
+
+      - name: Install fpm
+        run: gem install --no-document fpm
+
+      - name: Run build script
+        run: bash ./build-rpm.sh
+
+      - name: Upload RPM artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: freedownloadmanager-rpm
+          path: ./*.rpm
