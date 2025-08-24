@@ -2,6 +2,8 @@
 
 This project contains a script that downloads the official **Free Download Manager (FDM)** `.deb` package and converts it to a `.rpm` package for use in Fedora.
 
+✅ Tested on Fedora 42 Workstation
+
 ## 🚀 Usage
 Clone the repository and run the script:
 ```bash
