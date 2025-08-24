@@ -4,7 +4,13 @@ This project contains a script that downloads the official **Free Download Manag
 
 ✅ Tested on Fedora 42 Workstation
 
-## 🚀 Usage
+## 🚀 How to
+
+You can download it directly through Workflow (you need to be logged in): 
+https://github.com/victorsouzaleal/Free-Download-Manager-RPM/actions/workflows/build.yml
+
+OR
+
 Clone the repository and run the script:
 ```bash
 git clone https://github.com/victorsouzaleal/Free-Download-Manager-RPM.git
